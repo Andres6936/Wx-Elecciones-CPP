@@ -12,12 +12,9 @@ class PanelImagen : wxPanel
 
 public:
 
-    PanelImagen( wxWindow *parent );
+    explicit PanelImagen( wxWindow *parent );
 
-    ~PanelImagen( ) override
-    {
-
-    }
+    ~PanelImagen( ) override = default;
 
 };
 
