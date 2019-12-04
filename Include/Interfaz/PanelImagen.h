@@ -7,7 +7,7 @@
 
 #include "wx/wx.h"
 
-class PanelImagen : wxPanel
+class PanelImagen : public wxPanel
 {
 
 public:
