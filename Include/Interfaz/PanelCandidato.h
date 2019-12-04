@@ -2,7 +2,7 @@
 #define COMPROBANDO_PANELCANDIDATO_H
 
 #include "wx/wx.h"
-#include "../Mundo/Candidato.h"
+#include "Mundo/Candidato.h"
 
 class InterfazElecciones;
 

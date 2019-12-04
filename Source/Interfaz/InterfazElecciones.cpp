@@ -2,8 +2,7 @@
 
 InterfazElecciones::InterfazElecciones( const wxString &title ) : wxFrame( nullptr, wxID_ANY, title )
 {
-    // Construye la forma de la ventana.
-    this->SetSize( wxSize( 800, 600 ));
+    this->SetSize( wxSize( 600, 800 ));
     this->SetBackgroundColour( "White" );
 
     wxBoxSizer *sizerLayoutRoot = new wxBoxSizer( wxVERTICAL );
@@ -37,7 +36,7 @@ InterfazElecciones::InterfazElecciones( const wxString &title ) : wxFrame( nullp
     sizerLayoutCandidatos->Add( sizerLObama, 1, wxALL );
     sizerLayoutRoot->Add( sizerLayoutCandidatos, 3, wxEXPAND | wxALL );
     sizerLayoutRoot->Add( sizerUrn, 0, wxEXPAND | wxALL );
-    sizerLayoutRoot->Add( sizerExtension, 0, wxEXPAND | wxALL );
+    sizerLayoutRoot->Add( sizerExtension, wxSizerFlags( 0 ).Expand( ));
 
     this->SetSizerAndFit( sizerLayoutRoot );
     this->Layout( );

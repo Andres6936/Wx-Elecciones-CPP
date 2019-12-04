@@ -4,6 +4,7 @@ PanelCandidato::PanelCandidato( wxWindow *parent, Candidato &candidato ) : wxPan
                                                                                     wxDefaultSize )
 {
     this->SetBackgroundColour( "White" );
+    this->SetSize( wxSize( 200, 300 ));
 
     this->parent = reinterpret_cast<InterfazElecciones *>(parent);
 
@@ -28,23 +29,23 @@ PanelCandidato::PanelCandidato( wxWindow *parent, Candidato &candidato ) : wxPan
     const std::string costoCampanha = "Costo Campaña: $ " + std::to_string( candidato.getCostoCampanha( ));
     etiquetaCostoCampanhaCandidato = new wxStaticText( this, wxID_ANY, costoCampanha );
 
-    const std::string numberVotos = "Número de Votos: " + std::to_string( candidato.getVotos( ));
+    const std::string numberVotos = "N° Votos: " + std::to_string( candidato.getVotos( ));
     etiquetaNumeroVotos = new wxStaticText( this, wxID_ANY, numberVotos );
 
-    wxFlexGridSizer *sizerLayout = new wxFlexGridSizer( 9, 1, 1, 1 );
+    wxBoxSizer *sizerLayout = new wxBoxSizer( wxVERTICAL );
 
     wxBitmap bitmap = wxBitmap( candidato.getPathImage( ), wxBITMAP_TYPE_JPEG );
-    wxStaticBitmap *image = new wxStaticBitmap( this, wxID_ANY, bitmap );
+    wxStaticBitmap *image = new wxStaticBitmap( this, wxID_ANY, bitmap, wxDefaultPosition, wxSize( 160, 120 ));
 
-    sizerLayout->Add( image, 1 );
-    sizerLayout->Add( etiquetaNombreCandidato, 1 );
-    sizerLayout->Add( etiquetaApellidoCandidato, 1 );
-    sizerLayout->Add( etiquetaEdadCandidato, 1 );
-    sizerLayout->Add( etiquetaPartidoPoliticoCandidato, 1 );
-    sizerLayout->Add( etiquetaCostoCampanhaCandidato, 1 );
-    sizerLayout->Add( etiquetaNumeroVotos, 1, wxALIGN_CENTER );
-    sizerLayout->Add( botonPorcentajeVotos, 0, wxALIGN_CENTER );
-    sizerLayout->Add( botonVotar, 0, wxALIGN_CENTER );
+    sizerLayout->Add( image, 1, wxEXPAND | wxALL );
+    sizerLayout->Add( etiquetaNombreCandidato, 0, wxEXPAND | wxALL );
+    sizerLayout->Add( etiquetaApellidoCandidato, 0, wxEXPAND | wxALL );
+    sizerLayout->Add( etiquetaEdadCandidato, 0, wxEXPAND | wxALL );
+    sizerLayout->Add( etiquetaPartidoPoliticoCandidato, 0, wxEXPAND | wxALL );
+    sizerLayout->Add( etiquetaCostoCampanhaCandidato, 0, wxEXPAND | wxALL );
+    sizerLayout->Add( etiquetaNumeroVotos, 0, wxALIGN_CENTER );
+    sizerLayout->Add( botonPorcentajeVotos, wxSizerFlags( 0 ).Center( ).Expand( ));
+    sizerLayout->Add( botonVotar, wxSizerFlags( 0 ).Center( ).Expand( ));
 
     this->SetSizerAndFit( sizerLayout );
 }

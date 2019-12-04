@@ -14,9 +14,9 @@ PanelExtension::PanelExtension( wxWindow *parent ) : wxPanel( parent, wxID_ANY, 
 
     wxBoxSizer *sizer = new wxBoxSizer( wxHORIZONTAL );
 
-    sizer->Add( botonVaciarUrna, 0, wxALL, 5 );
-    sizer->Add( botonOpcion1, 0, wxALL, 5 );
-    sizer->Add( botonOpcion2, 0, wxALL, 5 );
+    sizer->Add( botonVaciarUrna, wxSizerFlags( 0 ).Expand( ));
+    sizer->Add( botonOpcion1, wxSizerFlags( 0 ).Expand( ));
+    sizer->Add( botonOpcion2, wxSizerFlags( 0 ).Expand( ));
 
     this->SetSizerAndFit( sizer );
 }
