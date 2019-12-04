@@ -13,32 +13,29 @@ PanelCandidato::PanelCandidato( wxWindow *parent, Candidato &candidato ) : wxPan
     botonVotar = new wxButton( this, wxID_ANY, wxT( "Votar" ) );
     botonVotar->SetSize( wxSize( 160, 20 ));
 
-    etiquetaNombreCandidato = new wxStaticText( this, wxID_ANY,
-                                                wxT( "Nombre: " + candidato.getNombre( )));
+    const std::string name = "Nombre: " + candidato.getNombre( );
+    etiquetaNombreCandidato = new wxStaticText( this, wxID_ANY, name );
 
-    etiquetaApellidoCandidato = new wxStaticText( this, wxID_ANY,
-                                                  wxT( "Apellido: " + candidato.getApellido( )));
+    const std::string lastname = "Apellido: " + candidato.getApellido( );
+    etiquetaApellidoCandidato = new wxStaticText( this, wxID_ANY, lastname );
 
-    etiquetaEdadCandidato = new wxStaticText( this, wxID_ANY,
-                                              wxT( "Edad: " + std::to_string( candidato.getEdad( ))));
+    const std::string years = "Edad: " + std::to_string( candidato.getEdad( ));
+    etiquetaEdadCandidato = new wxStaticText( this, wxID_ANY, years );
 
-    etiquetaPartidoPoliticoCandidato = new wxStaticText( this, wxID_ANY,
-                                                         wxT( "Partido Político: " + candidato.getPartidoPolitico( )));
+    const std::string politicalParty = "Partido Político: " + candidato.getPartidoPolitico( );
+    etiquetaPartidoPoliticoCandidato = new wxStaticText( this, wxID_ANY, politicalParty );
 
-    etiquetaCostoCampanhaCandidato = new wxStaticText( this, wxID_ANY,
-                                                       wxT( "Costo Campaña: $ " +
-                                                            std::to_string( candidato.getCostoCampanha( ))));
+    const std::string costoCampanha = "Costo Campaña: $ " + std::to_string( candidato.getCostoCampanha( ));
+    etiquetaCostoCampanhaCandidato = new wxStaticText( this, wxID_ANY, costoCampanha );
 
-    etiquetaNumeroVotos = new wxStaticText( this, wxID_ANY,
-                                            wxT( "Número de Votos: " + std::to_string( candidato.getVotos( ))));
+    const std::string numberVotos = "Número de Votos: " + std::to_string( candidato.getVotos( ));
+    etiquetaNumeroVotos = new wxStaticText( this, wxID_ANY, numberVotos );
 
     wxFlexGridSizer *sizerLayout = new wxFlexGridSizer( 9, 1, 1, 1 );
-    //wxBoxSizer *sizerLayoutImage = new wxBoxSizer(wxVERTICAL);
 
     wxBitmap bitmap = wxBitmap( candidato.getPathImage( ), wxBITMAP_TYPE_JPEG );
     wxStaticBitmap *image = new wxStaticBitmap( this, wxID_ANY, bitmap );
 
-    //sizerLayoutImage->Add(image, 1, wxEXPAND);
     sizerLayout->Add( image, 1 );
     sizerLayout->Add( etiquetaNombreCandidato, 1 );
     sizerLayout->Add( etiquetaApellidoCandidato, 1 );
