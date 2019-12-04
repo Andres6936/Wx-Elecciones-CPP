@@ -17,7 +17,9 @@ private:
 
     Urna urna = Urna( );
 
-    PanelCandidato *panelCandidato;
+    PanelCandidato *panelFrank;
+    PanelCandidato *panelClaire;
+    PanelCandidato *panelObama;
 
     PanelExtension *panelExtension;
 

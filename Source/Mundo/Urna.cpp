@@ -1,5 +1,8 @@
-//
-// Created by andres6936 on 6/03/18.
-//
+#include "Mundo/Urna.h"
 
-#include "../../Include/Mundo/Urna.h"
+Urna::Urna( )
+{
+    candidato1.setPathImage( "./Data/Francis.jpg" );
+    candidato2.setPathImage( "./Data/Claire.jpg" );
+    candidato3.setPathImage( "./Data/Obama.jpg" );
+}

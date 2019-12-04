@@ -1,7 +1,3 @@
-//
-// Created by andres6936 on 7/03/18.
-//
-
 #ifndef COMPROBANDO_PANELCANDIDATO_H
 #define COMPROBANDO_PANELCANDIDATO_H
 
@@ -10,7 +6,7 @@
 
 class InterfazElecciones;
 
-class PanelCandidato : wxPanel
+class PanelCandidato : public wxPanel
 {
 
 private:
@@ -35,26 +31,9 @@ private:
 
 public:
 
-    PanelCandidato( ) : wxPanel( nullptr, wxID_ANY, wxDefaultPosition, wxDefaultSize )
-    {
-        etiquetaNombreCandidato = new wxStaticText( this, wxID_ANY, wxT( "Nombre: " ) );
+    explicit PanelCandidato( wxWindow *parent, Candidato &candidato );
 
-        etiquetaApellidoCandidato = new wxStaticText( this, wxID_ANY, wxT( "Apellido: " ) );
-
-        etiquetaEdadCandidato = new wxStaticText( this, wxID_ANY, wxT( "Edad: " ) );
-
-        etiquetaPartidoPoliticoCandidato = new wxStaticText( this, wxID_ANY, wxT( "Partido Político: " ) );
-
-        etiquetaCostoCampanhaCandidato = new wxStaticText( this, wxID_ANY, wxT( "Costo Campaña: $ " ) );
-
-        etiquetaNumeroVotos = new wxStaticText( this, wxID_ANY, wxT( "Número de Votos: " ) );
-
-    }
-
-    ~PanelCandidato( )
-    {
-
-    }
+    ~PanelCandidato( ) override;
 
     void actualizar( Candidato candidato )
     {

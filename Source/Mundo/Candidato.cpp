@@ -1,5 +1,16 @@
-//
-// Created by andres6936 on 31/10/17.
-//
+#include "Mundo/Candidato.h"
 
-#include "../../Include/Mundo/Candidato.h"
+void Candidato::setPathImage( const string &path )
+{
+    pathimage = path;
+}
+
+int Candidato::getEdad( )
+{
+    return edad;
+}
+
+string Candidato::getPathImage( )
+{
+    return pathimage;
+}

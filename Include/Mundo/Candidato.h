@@ -1,7 +1,3 @@
-//
-// Created by andres6936 on 28/02/18.
-//
-
 #ifndef CANDIDATO_H
 #define CANDIDATO_H
 
@@ -34,6 +30,11 @@ private:
      * Partido político del candidato.
      */
     string partidoPolitico;
+
+    /**
+     * Ruta de la imagen del candidato.
+     */
+    string pathimage;
 
     /**
      * Edad del candidato.
@@ -102,10 +103,7 @@ public:
      * Devuelve la edad del candidato.
      * @return Edad del candidato.
      */
-    int getEdad( )
-    {
-        return edad;
-    }
+    int getEdad( );
 
     double getCostoCampanha( )
     {
@@ -116,6 +114,10 @@ public:
     {
         return votos;
     }
+
+    string getPathImage( );
+
+    void setPathImage( const string &path );
 
     void ingresarUnVoto( )
     {

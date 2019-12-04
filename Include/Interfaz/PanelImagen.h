@@ -1,7 +1,3 @@
-//
-// Created by andres6936 on 7/03/18.
-//
-
 #ifndef COMPROBANDO_PANELIMAGEN_H
 #define COMPROBANDO_PANELIMAGEN_H
 

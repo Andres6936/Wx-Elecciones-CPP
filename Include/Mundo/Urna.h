@@ -12,7 +12,7 @@ class Urna
 
 private:
 
-    Candidato candidato1 = Candidato( "Felipe", "Pitti", "Independiente", 27 );;
+    Candidato candidato1 = Candidato( "Felipe", "Pitti", "Independiente", 27 );
 
     Candidato candidato2 = Candidato( "Susanita", "Chirusi", "Revolucionario", 26 );
 
@@ -20,21 +20,21 @@ private:
 
 public:
 
-    Urna( ) = default;
+    Urna( );
 
     ~Urna( ) = default;
 
-    Candidato getCandidato1( )
+    Candidato & getCandidato1( )
     {
         return candidato1;
     }
 
-    Candidato getCandidato2( )
+    Candidato & getCandidato2( )
     {
         return candidato2;
     }
 
-    Candidato getCandidato3( )
+    Candidato & getCandidato3( )
     {
         return candidato3;
     }
