@@ -7,6 +7,7 @@ InterfazElecciones::InterfazElecciones( const wxString &title ) : wxFrame( nullp
     this->SetBackgroundColour( "White" );
 
     wxBoxSizer *sizerLayoutRoot = new wxBoxSizer( wxVERTICAL );
+    wxBoxSizer *sizerLayoutCandidatos = new wxBoxSizer( wxHORIZONTAL );
 
     panelImagen = new PanelImagen( this );
 
@@ -15,9 +16,10 @@ InterfazElecciones::InterfazElecciones( const wxString &title ) : wxFrame( nullp
     panelObama = new PanelCandidato( this, urna.getCandidato3( ));
 
     sizerLayoutRoot->Add( panelImagen, 1, wxEXPAND );
-    sizerLayoutRoot->Add( panelFrank, 1, wxEXPAND );
-    sizerLayoutRoot->Add( panelClaire, 1, wxEXPAND );
-    sizerLayoutRoot->Add( panelObama, 1, wxEXPAND );
+    sizerLayoutCandidatos->Add( panelFrank, 1, wxEXPAND );
+    sizerLayoutCandidatos->Add( panelClaire, 1, wxEXPAND );
+    sizerLayoutCandidatos->Add( panelObama, 1, wxEXPAND );
+    sizerLayoutRoot->Add( sizerLayoutCandidatos, 1, wxEXPAND );
 
     this->SetSizerAndFit( sizerLayoutRoot );
     this->Centre( );
