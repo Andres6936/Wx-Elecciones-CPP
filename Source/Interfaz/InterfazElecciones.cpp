@@ -31,13 +31,13 @@ InterfazElecciones::InterfazElecciones( const wxString &title ) : wxFrame( nullp
     panelExtension = new PanelExtension( this );
     sizerExtension->Add( panelExtension, 1, wxALIGN_CENTER );
 
-    sizerLayoutRoot->Add( panelImagen, 1, wxEXPAND );
-    sizerLayoutCandidatos->Add( sizerLFrank, 1, wxEXPAND );
-    sizerLayoutCandidatos->Add( sizerLClaire, 1, wxEXPAND );
-    sizerLayoutCandidatos->Add( sizerLObama, 1, wxEXPAND );
-    sizerLayoutRoot->Add( sizerLayoutCandidatos, 3, wxEXPAND );
-    sizerLayoutRoot->Add( sizerUrn, 1, wxEXPAND );
-    sizerLayoutRoot->Add( sizerExtension, 1, wxEXPAND );
+    sizerLayoutRoot->Add( panelImagen, 1, wxALL );
+    sizerLayoutCandidatos->Add( sizerLFrank, 1, wxALL );
+    sizerLayoutCandidatos->Add( sizerLClaire, 1, wxALL );
+    sizerLayoutCandidatos->Add( sizerLObama, 1, wxALL );
+    sizerLayoutRoot->Add( sizerLayoutCandidatos, 3, wxEXPAND | wxALL );
+    sizerLayoutRoot->Add( sizerUrn, 0, wxEXPAND | wxALL );
+    sizerLayoutRoot->Add( sizerExtension, 0, wxEXPAND | wxALL );
 
     this->SetSizerAndFit( sizerLayoutRoot );
     this->Layout( );

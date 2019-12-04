@@ -20,27 +20,15 @@ private:
 
 public:
 
-    PanelExtension( wxWindow *parent );
+    explicit PanelExtension( wxWindow *parent );
 
-    ~PanelExtension( )
-    {
+    ~PanelExtension( ) override = default;
 
-    }
+    void onVaciarUrna( );
 
-    void onVaciarUrna( )
-    {
+    void onOpcion1( );
 
-    }
-
-    void onOpcion1( )
-    {
-
-    }
-
-    void onOpcion2( )
-    {
-
-    }
+    void onOpcion2( );
 
 };
 
