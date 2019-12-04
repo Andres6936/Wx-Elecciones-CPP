@@ -1,7 +1,3 @@
-//
-// Created by andres6936 on 7/03/18.
-//
-
 #ifndef COMPROBANDO_PANELEXTENSION_H
 #define COMPROBANDO_PANELEXTENSION_H
 
@@ -9,7 +5,7 @@
 
 class InterfazElecciones;
 
-class PanelExtension : wxPanel
+class PanelExtension : public wxPanel
 {
 
 private:
@@ -24,14 +20,7 @@ private:
 
 public:
 
-    PanelExtension( ) : wxPanel( nullptr, wxID_ANY, wxDefaultPosition, wxDefaultSize )
-    {
-        botonVaciarUrna = new wxButton( this, wxID_ANY, wxT( "Vaciar Urna" ) );
-
-        botonOpcion1 = new wxButton( this, wxID_ANY, wxT( "Opción 1" ) );
-
-        botonOpcion2 = new wxButton( this, wxID_ANY, wxT( "Opción 2" ) );
-    }
+    PanelExtension( wxWindow *parent );
 
     ~PanelExtension( )
     {

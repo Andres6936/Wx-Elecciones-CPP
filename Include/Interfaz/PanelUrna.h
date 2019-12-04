@@ -1,32 +1,22 @@
-//
-// Created by andres6936 on 7/03/18.
-//
-
 #ifndef COMPROBANDO_PANELURNA_H
 #define COMPROBANDO_PANELURNA_H
 
 #include "wx/wx.h"
 
-class PanelUrna : wxPanel
+class PanelUrna : public wxPanel
 {
 
 private:
 
-    wxStaticText etiquetaTotalVotos;
+    wxStaticText *etiquetaTotalVotos;
 
-    wxStaticText etiquetaPromedioCostoCampanha;
+    wxStaticText *etiquetaPromedioCostoCampanha;
 
 public:
 
-    PanelUrna( )
-    {
+    explicit PanelUrna( wxWindow *parent );
 
-    }
-
-    ~PanelUrna( )
-    {
-
-    }
+    ~PanelUrna( ) override = default;
 
 
     void actualizar( )
