@@ -3,6 +3,7 @@
 PanelExtension::PanelExtension( wxWindow *parent ) : wxPanel( parent, wxID_ANY, wxDefaultPosition, wxDefaultSize )
 {
     this->SetBackgroundColour( "White" );
+    this->SetSize( wxSize( 600, 50 ));
 
     this->parent = reinterpret_cast<InterfazElecciones *>(parent);
 
@@ -14,9 +15,9 @@ PanelExtension::PanelExtension( wxWindow *parent ) : wxPanel( parent, wxID_ANY, 
 
     wxBoxSizer *sizer = new wxBoxSizer( wxHORIZONTAL );
 
-    sizer->Add( botonVaciarUrna, wxSizerFlags( 0 ).Expand( ));
-    sizer->Add( botonOpcion1, wxSizerFlags( 0 ).Expand( ));
-    sizer->Add( botonOpcion2, wxSizerFlags( 0 ).Expand( ));
+    sizer->Add( botonVaciarUrna, 0, wxEXPAND | wxALL );
+    sizer->Add( botonOpcion1, 0, wxEXPAND | wxALL );
+    sizer->Add( botonOpcion2, 0, wxEXPAND | wxALL );
 
     this->SetSizerAndFit( sizer );
 }
