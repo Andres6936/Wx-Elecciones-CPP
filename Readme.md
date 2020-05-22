@@ -24,4 +24,6 @@ Cupi2 elections.
 # Interface
 
 
-![Interface](/Docs/Interface.png)
+<p align="center">
+<img src="/Docs/Interface.png" alt="Interface"/>
+</p>
