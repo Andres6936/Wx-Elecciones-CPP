@@ -8,6 +8,7 @@ PanelExtension::PanelExtension( wxWindow *parent ) : wxPanel( parent, wxID_ANY, 
     this->parent = reinterpret_cast<InterfazElecciones *>(parent);
 
     botonVaciarUrna = new wxButton( this, wxID_ANY, wxT( "Vaciar Urna" ) );
+    botonVaciarUrna->SetExtraStyle(wxBORDER_SUNKEN);
 
     botonOpcion1 = new wxButton( this, wxID_ANY, wxT( "Opción 1" ) );
 

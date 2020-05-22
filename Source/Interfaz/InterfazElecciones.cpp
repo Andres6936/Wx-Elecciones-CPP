@@ -2,7 +2,7 @@
 
 InterfazElecciones::InterfazElecciones( const wxString &title ) : wxFrame( nullptr, wxID_ANY, title )
 {
-    this->SetSize( wxSize( 600, 8000 ));
+    this->SetMinSize( wxSize( 800, 600 ));
     this->SetBackgroundColour( "White" );
 
     wxBoxSizer *sizerLayoutRoot = new wxBoxSizer( wxVERTICAL );
